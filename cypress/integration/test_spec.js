@@ -200,7 +200,7 @@ describe("Рассчёт стоимости", function() {
   });
 });
 
-describe.skip("Промо-акции", function() {
+describe("Промо-акции", function() {
   it("От 5000 рублей доставка бесплатная", function() {
     cy.visit(address);
 

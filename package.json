@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "browser-test": "cypress run --headed --no-exit",
+    "browser-test": "cypress run",
     "cypress": "cypress open"
   },
   "devDependencies": {
