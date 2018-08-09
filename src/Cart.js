@@ -23,13 +23,15 @@ export default class Cart extends React.Component<Props, State> {
             <div className="cart-header">Ваш заказ</div>
 
             <table className="cart-table">
-              {groupAndCountItems(this.props.items).map(item => (
-                <tr>
-                  <td>{item.name}</td>
-                  <td>{item.price}₽</td>
-                  <td>{item.count} шт</td>
-                </tr>
-              ))}
+              <tbody>
+                {groupAndCountItems(this.props.items).map(item => (
+                  <tr key={item.id}>
+                    <td>{item.name}</td>
+                    <td>{item.price}₽</td>
+                    <td>{item.count} шт</td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
 
             <div className="cart-footer">
@@ -46,7 +48,9 @@ export default class Cart extends React.Component<Props, State> {
               </label>
               <div className="cart-total">
                 Полная стоимость:{" "}
-                {countTotalPrice(this.props.items, this.state.needsDelivery)}₽
+                <span data-testid="totalPrice">
+                  {countTotalPrice(this.props.items, this.state.needsDelivery)}₽
+                </span>
               </div>
             </div>
           </React.Fragment>
