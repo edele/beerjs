@@ -1,0 +1,53 @@
+.cart-button:hover {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+  border-color: blue;
+}
+
+.cart-button:active {
+  filter: drop-shadow(0 10px 25px red);
+  background-color: red;
+}
+
+@keyframes slidein {
+  from {
+    transform: rotate(-960deg) scale(0.1);
+  }
+
+  to {
+    transform: rotate(0) scale(1);
+  }
+}
+
+.cart {
+  animation-duration: 1s;
+  animation-name: slidein;
+
+  position: absolute;
+  background: springgreen;
+  width: 70%;
+  top: calc(100% + 40px);
+  z-index: 1;
+  right: 60px;
+  filter: drop-shadow(0 10px 100px rgba(0, 0, 0, 1));
+  border: 3px solid black;
+  padding: 40px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.cart-table td {
+  padding: 0 20px 0 0;
+}
+
+.cart-footer {
+  margin-top: 2em;
+}
+
+.cart-total {
+  margin-top: 10px;
+  border-top: 6px solid;
+}
+
+.cart-header {
+  margin-bottom: 0.5em;
+}

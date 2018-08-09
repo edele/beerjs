@@ -1,0 +1,89 @@
+.shop {
+  margin-top: 100px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  min-height: 60px;
+  background: rgba(0, 255, 127, 0.3);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.cart-button {
+  color: yellow;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  background-color: black;
+  border: 10px solid red;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+  margin-bottom: -20px;
+  display: block;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin: 30px;
+  position: relative;
+}
+
+.item-name {
+  font-size: 2em;
+  font-weight: bold;
+  background-color: coral;
+  box-shadow: -6px 6px black;
+  display: inline-block;
+  padding: 10px 0 30px 30px;
+  margin-left: 20px;
+  margin-bottom: -60px;
+  position: relative;
+}
+
+.item-image {
+  width: 300px;
+  display: block;
+  box-shadow: -6px 6px black;
+}
+
+.item-price {
+  position: absolute;
+  color: yellow;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 900;
+  font-size: 4em;
+  top: 100px;
+  right: -15px;
+  text-shadow: -6px 6px black;
+}
+
+.item-add {
+  position: absolute;
+  color: yellow;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  background-color: black;
+  bottom: 1em;
+  left: -30px;
+  box-shadow: -10px 10px red;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+}
+
+.item-add:hover {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+  border-color: blue;
+}
+
+.item-add:active {
+  filter: drop-shadow(0 10px 25px red);
+  background-color: red;
+}
