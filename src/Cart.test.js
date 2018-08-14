@@ -48,3 +48,25 @@ test("Три товара и доставка", async () => {
 
   expect(getByTestId("totalPrice")).toHaveTextContent("1100₽");
 });
+
+test("Доставка должна быть бесплатной, если в корзине больше 5000 рублей", async () => {
+  const items = [
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 },
+    { id: "5", name: "Ле Жгучий перец", image: "socks/5.png", price: 500 }
+  ];
+
+  const { getByText, getByTestId, container } = render(<Cart items={items} />);
+
+  fireEvent.click(getByText("Нужна доставка"));
+
+  expect(getByTestId("totalPrice")).toHaveTextContent("5500₽");
+});
