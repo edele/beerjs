@@ -3,6 +3,7 @@
 import * as React from "react";
 import type { Item } from "./Shop";
 import Switch from "./Switch";
+import countTotalPrice from "./countTotalPrice";
 
 import "./Cart.css";
 
@@ -60,19 +61,6 @@ export default class Cart extends React.Component<Props, State> {
       </div>
     );
   }
-}
-
-function countTotalPrice(items, includeDeliveryCost = false) {
-  let total = 0;
-  for (const item of items) {
-    total += item.price;
-  }
-
-  if (includeDeliveryCost === true) {
-    total += 500;
-  }
-
-  return total;
 }
 
 function groupAndCountItems(items) {
