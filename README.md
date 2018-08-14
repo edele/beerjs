@@ -1,4 +1,4 @@
-# Демо проект с моего доклада про тесты на BeerJS
+# Доклад про тесты на BeerJS
 
 Доклад произошёл 9 августа 2018. Слайды: https://speakerdeck.com/edele/beer-js-number-2
 
